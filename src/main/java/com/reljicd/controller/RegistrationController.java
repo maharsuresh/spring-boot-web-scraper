@@ -32,7 +32,7 @@ public class RegistrationController {
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
-        System.out.println("inside createnewuser ::::")
+        System.out.println("inside createnewuser ::::");
 
         if (userService.findByEmail(user.getEmail()).isPresent()) {
             bindingResult
