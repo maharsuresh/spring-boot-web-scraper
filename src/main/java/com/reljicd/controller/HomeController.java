@@ -27,7 +27,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public ModelAndView home(@RequestParam("page") Optional<Integer> page) {
-
+System.out.println("Test");
         // Evaluate page. If requested parameter is null or less than 0 (to
         // prevent exception), return initial size. Otherwise, return value of
         // param. decreased by 1.
