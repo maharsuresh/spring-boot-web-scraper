@@ -35,12 +35,13 @@ public class Pager {
     }
 
     public long getTotalElements() {
+         System.out.println("Test :::");
         return links.getTotalElements();
     }
 
     public boolean indexOutOfBounds() {
         return this.getPageIndex() < 0 || this.getPageIndex() > this.getTotalElements();
-        System.out.println("Test :::");
+       
     }
 
 }
