@@ -22,6 +22,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ModelAndView exception(final Throwable throwable, final Model model) {
+        logger.info("1234");
         logger.error("Exception during execution of SpringSecurity application", throwable);
 
         ModelAndView modelAndView = new ModelAndView("/error");
